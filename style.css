@@ -49,7 +49,7 @@ header{
 }
 .address .tel{
     font-size:25px;
-    background-image:url("public/bgTel.png");
+    background-image:url("/bgTel.png");
     background-position:left;
     background-repeat:no-repeat;
 }
