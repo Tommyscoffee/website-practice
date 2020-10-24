@@ -1,0 +1,105 @@
+*{font-family: 'Sawarabi Gothic', sans-serif;
+    line-height:180%;
+    /* 日本語などを単語中に改行しないようにする */
+    word-break: break-all;
+    /* これがないとずれる */
+    margin:0;
+    -webkit-box-sizing:border-box;
+    /*なぜ-weblit-を記入したかというと、#wrapper{border-top:solid 8px #6CC6C4 をheaderを作った後に記述して、header全体が8px下に下がってしまい、*/
+    /*これで、borderがheightに含まれて、詰まる考えたから。　結局、position:abloslute; top: 値をすべて-8の値に書き換えた。*/
+}
+#wrapper{
+    border-top:solid 8px #6CC6C4;
+    /* box-sizing:border-box; */
+}
+.header-wrapper{
+    height:200px;
+    margin:0 auto 20px;
+    width:920px;
+}
+header{
+    position:relative;
+    height:200px;
+}
+/* header{
+    position:relative;
+} */
+.header-right{
+    float:right;
+    text-align:right;
+}
+.siteTitle{
+    position:absolute;
+    top:50px;
+    /* マージンが初期値でついていたので０にした */
+    margin:0;
+}
+.phrase{
+    font-size:10px;
+    position:absolute;
+    top:12px;
+    right:0;
+}
+.address{
+    position:absolute;
+    top:45px;
+    right:0;
+    height:75px;
+    width:220px;
+}
+.address .tel{
+    font-size:25px;
+    background-image:url("public/bgTel.png");
+    background-position:left;
+    background-repeat:no-repeat;
+}
+.reception{
+    border:solid 1px gray;
+    font-size:10px;
+    height: 30px;
+    padding:5px 0px;
+    text-align:center;  
+}
+.reception .red{
+    color:#B73916; 
+}
+.header-nav{
+    position: absolute;
+    top:127px;
+    width:100%;
+    border:solid 1px #6CC6C4;
+    /* border-radius:6px; これではheader-navのリスト一つ一つを区切れない */
+
+    height:70px;  
+    background-color:#6CC6C4;
+}
+.header-nav .first{
+    /* これで、header-navの一番左のリストの左上、左下の角が丸くなる */
+    border-radius:6px 0px 0px 6px;
+
+}
+/* display:flex;は親要素に指定する */
+.header-nav ol{
+    display:flex;
+    list-style:none;
+    /* justify-contentも親要素に指定する */
+    justify-content: space-between ;
+
+}
+.header-nav span{
+    /* blockレベルは親要素の幅と同じになるから、この場合、.header-nav liと同じ幅()になり、縦に並べることができる。 */
+    display:block;  
+    word-break:break-all; 
+    text-align:center; 
+    line-height:20px; 
+    font-size:108%;
+}
+
+.header-nav a{
+    padding:20px 60px;
+text-decoration:none;
+
+}
+.header-nav a{
+    color:white;
+}
