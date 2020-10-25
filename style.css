@@ -1,12 +1,10 @@
 *{font-family: 'Sawarabi Gothic', sans-serif;
     line-height:180%;
-    /* 日本語などを単語中に改行しないようにする */
+    /* 日本がなどを単語中に改行しないようにする */
     word-break: break-all;
     /* これがないとずれる */
     margin:0;
     -webkit-box-sizing:border-box;
-    /*なぜ-weblit-を記入したかというと、#wrapper{border-top:solid 8px #6CC6C4 をheaderを作った後に記述して、header全体が8px下に下がってしまい、*/
-    /*これで、borderがheightに含まれて、詰まる考えたから。　結局、position:abloslute; top: 値をすべて-8の値に書き換えた。*/
 }
 #wrapper{
     border-top:solid 8px #6CC6C4;
@@ -35,26 +33,28 @@ header{
     margin:0;
 }
 .phrase{
-    font-size:10px;
+    font-size:8px;
     position:absolute;
     top:12px;
     right:0;
 }
 .address{
     position:absolute;
-    top:45px;
+    top:35px;
     right:0;
     height:75px;
     width:220px;
 }
 .address .tel{
     font-size:25px;
-    background-image:url("/bgTel.png");
+    background-image:url("public/bgTel.png");
     background-position:left;
     background-repeat:no-repeat;
+    padding:0 0 0 25px;
+    text-align:center;
 }
 .reception{
-    border:solid 1px gray;
+    border:solid 1px #D6D6D6;
     font-size:10px;
     height: 30px;
     padding:5px 0px;
@@ -65,26 +65,31 @@ header{
 }
 .header-nav{
     position: absolute;
-    top:127px;
+    top:128px;
     width:100%;
     border:solid 1px #6CC6C4;
     /* border-radius:6px; これではheader-navのリスト一つ一つを区切れない */
-
-    height:70px;  
+    font-size:12px;
+    height:72px;  
     background-color:#6CC6C4;
+    /* linear-gradient関数で、グラデーション、一番下で濃くなる */
+    background-image: linear-gradient(rgb(156,227,225) 0%,rgb(108,198,196) 100%);
+    border-radius:6px;
 }
 .header-nav .first{
     /* これで、header-navの一番左のリストの左上、左下の角が丸くなる */
     border-radius:6px 0px 0px 6px;
-
+    /* border-left:#71C9C7 1px solid;
+    border-right:#99E1DF 1px solid; */
 }
 /* display:flex;は親要素に指定する */
-.header-nav ol{
+.header-nav ul{
     display:flex;
     list-style:none;
     /* justify-contentも親要素に指定する */
-    justify-content: space-between ;
-
+    justify-content: space-around ;
+    margin:0; 
+    padding:0;  
 }
 .header-nav span{
     /* blockレベルは親要素の幅と同じになるから、この場合、.header-nav liと同じ幅()になり、縦に並べることができる。 */
@@ -96,10 +101,53 @@ header{
 }
 
 .header-nav a{
-    padding:20px 60px;
-text-decoration:none;
+    padding:17px 0 18px;
+    text-decoration:none;
+    text-shadow:1px 1px 2px #6CC6C4;
+    color:white;
+    display:block;
+    border-right: #71C9C7 solid 1px;
+    border-left: #99E1DF solid 1px;
+
+    height:70px;
+}
+.header-nav li{
+    text-align:-webkit-match-parent;
+    width:100%;
+    /* これを、li>aのheightがliを超えていたのを解消しようとしたが、解消されず、直接aセレクタのheightを70pxにした */
+    /* height:70px;
+    margin:0;
+    padding:0;
+    list-style:none; */
+}
+/* li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+} */
+.contents-wrapper{
+    width:920px;
+    margin:0 auto;
+    text-align:left;
+    /* overflowで高さが戻った。子要素の.content-mainがfloat:rightで親要素の高さが消える。 */
+    overflow:hidden;
+}
+.content-main{
+    width:645px;
+    margin-left:20px;
+    float:right;
+    display:block;
+}
+.mainImage img{
+    height:280px;
 
 }
-.header-nav a{
-    color:white;
+.content-sub{
+    display:block;
+    /* margin-top:20px; */
+    float:left;
+    width:260px;
+    margin-left:auto;
+}
+footer{
+    float:left;
 }
