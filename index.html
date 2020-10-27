@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,6 +10,7 @@
         <meta name="description" content="Dental Clinicのページです">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://tommyscoffee.github.io/website-practice/style.css">
+
     </head>
     <body>
         <!-- headerの枠を整えるためその上にdiv.header-wrapper -->
@@ -85,22 +87,81 @@
             </header>
         </div>
         <main>
-            <div class="contents-wrapper">
-                <div class="content-main">
-                    <div class="mainImage">
-                        <img src="../public/dentist.jpg" alt="dentist">メイン画像 新着情報 2012年08月01日
+
+            <div class="main-wrapper">
+                <div class="main-content">
+                    <img src="../public/dentist.jpg" alt="dentist">
+                    <div class="news">
+                        <h2><span class="news-title">新着情報</span></h2>
+                        <dl>
+                            <dt>
+                                2012年08月01日
+                            </dt>
+                            <dd>
+                                【診療時間変更のお知らせ】長期休診の前日8月11日は、通常より1時間長く診療をすることにしました。ご予約をお待ちしております。
+                            </dd>
+                            <dt>
+                                2012年07月24日
+                            </dt>
+                            <dd>
+                                【8月の休診のお知らせ】8月12日～16日の間は休診とさせていただきます。何卒よろしくお願いいたします。
+                            </dd>
+                            <dt>
+                                2012年07月02日
+                            </dt>
+                            <dd>
+                                【こどもデンタル教室のご案内】毎月第2土曜日に行っているこどもデンタル教室では、参加してくださるお子様を募集しております。
+                            </dd>
+                            <dt>
+                                2012年06月20日
+                            </dt>
+                            <dd>
+                                【7月休診日のお知らせ】7月は土日祝日以外の休診日はありません。ご来院お待ちしております。
+                            </dd>
+                            <dt>
+                                2012年06月01日
+                            </dt>
+                            <dd>
+                                ホームページをリニューアルしました。
+                            </dd>
+                        </dl>
                     </div>
-                    <p>
-                        【診療時間変更のお知らせ】長期休診の前日8月11日は、通常より1時間長く診療をすることにしました。ご予約をお待ちしております。
-                        2012年07月24日【8月の休診のお知らせ】8月12日～16日の間は休診とさせていただきます。何卒よろしくお願いいたします。
-                        2012年07月02日【こどもデンタル教室のご案内】毎月第2土曜日に行っているこどもデンタル教室では、参加してくださるお子様を募集しております。
-                        2012年06月20日【7月休診日のお知らせ】7月は土日祝日以外の休診日はありません。ご来院お待ちしております。 2012年06月01日
-                        ホームページをリニューアルしました。
-                    </p>
                 </div>
-                <div class="content-sub">
-                    <!-- 一般歯科 虫歯治療 歯周病治療 入れ歯 予防歯科 審美歯科 ホワイトニング オールセラミック セラミックインレー PMTC -->
-                    この要素が.content-mainのfloat:right;で左に回り込まない。
+                <div class="menu">
+                    <div class="menus">
+                        <h2 class="optional-title">
+                            一般歯科
+                        </h2> <ul class="menu-list">
+                                <li>
+                                    ◆<a href="#">虫歯治療</a>
+                                </li> 
+                                <li>
+                                    ◆<a href="#">歯周病治療 </a>
+                                </li>
+                                <li>
+                                    ◆<a href="#">入れ歯</a>
+                                </li>
+                                 <li>
+                                    ◆<a href="#">予防歯科</a>
+                                 </li>
+
+                        </ul>
+                    </div>
+                    <div class="menus">
+                        <h2 class="optional-title">
+                            審美歯科
+                        </h2> <ul class="menu-list">
+                            <li>
+                                ◆<a href="#">ホワイトニング</a>
+                            </li> <li>
+                                ◆<a href="#">オールセラミック</a>
+                            </li> <li>
+                                ◆<a href="#" id="">セラミックインレー</a>
+                            </li> <li>
+                                ◆<a href="#">PMTC</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </main>
