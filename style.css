@@ -132,7 +132,11 @@ header{
     display: list-item;
     text-align: -webkit-match-parent;
 } */
-.contents-wrapper{
+main{
+    width:920px;
+    margin:0 auto;
+}
+.main-wrapper{
     width:920px;
     margin:0 auto;
     text-align:left;
@@ -206,11 +210,10 @@ header{
     height:40px;
     /* line-heightで文字が中央に寄った */
     line-height:40px;   
+    background-image: linear-gradient(rgb(156,227,225) 0%,rgb(108,198,196) 100%);
 }
 
-.optional-title{
-    height:40px;
-}
+
 .menus ul{
     margin:0px 12px;
     padding-left:20px;
@@ -226,9 +229,56 @@ header{
 
 }
 .menu-list a{
-    line-height:40px;
+    line-height:25px;
     padding:8px 0;
     list-style:none;
     color:#595959;
     text-decoration:none;
+    display:block;
+    /* float:left; */
+}
+.menu-list a:hover{
+    color:#AEC14C;
+
+}
+.footer{
+    width:920px;
+    margin:0 auto;
+}
+.footer-wrapper ul{
+    background-color:#6CC6C4;
+    overflow:hidden;
+    color:white;
+}
+.footer-wrapper ul li{
+    float:left;
+    padding:0px 20px 0 25px;
+    list-style:none;
+    background-image:url("public/bgFooterIcon.png");
+    background-position:left;
+    background-repeat:no-repeat;
+    font-size:15px;
+}
+.footer-wrapper a{
+    text-decoration:none;
+    color:white;
+
+}
+.footer-wrapper a:hover{
+    text-decoration:underline;
+}
+.footer-address{
+    /* float:right; */
+    height:50px;
+    text-align:right;
+    line-height:50px;
+    font-size:12px;
+    border-bottom:2px solid #6CC6C4;
+    color:#515151;
+}
+.footer-copyright p{
+    text-align:center;
+    font-size:14px;
+    line-height:50px;
+    color:#515151;
 }
